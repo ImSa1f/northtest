@@ -1,3 +1,4 @@
+print('ice')
 
 if UseUi then
     if getfenv().getconnections then
