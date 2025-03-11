@@ -1,3 +1,4 @@
+print('yo')
 
 if UseUi then
     if getfenv().getconnections then
@@ -2517,7 +2518,7 @@ if UseUi then
                         end)
 
                         UserInputService.InputBegan:Connect(function(inp)
-                            if focused and not isBinding and not isTyping then
+                            if focused and not isBinding then
                                 isBinding = true
 
                                 local Event
@@ -2546,7 +2547,7 @@ if UseUi then
                                 end)
                             else
                                 -- here fix cuh
-                                if not reset and (inp.KeyCode == binded or inp.UserInputType == binded) then
+                                if not reset and not isTyping and (inp.KeyCode == binded or inp.UserInputType == binded) then
                                     if KeybindFunctions.Settings.Callback then
                                         KeybindFunctions.Settings.Callback(binded)
                                     end
