@@ -2,6 +2,7 @@
 if UseUi then
 
     local KeybindBruh = Enum.KeyCode.RightControl
+    local MenuKeybind = KeybindBruh
 
     if getfenv().getconnections then
         for _, skib in next, getfenv().getconnections(cloneref(game:GetService("ScriptContext")).Error) do
@@ -5600,8 +5601,6 @@ if UseUi then
         function WindowFunctions.onUnloaded(callback)
             onUnloadCallback = callback
         end
-
-        local MenuKeybind = KeybindBruh
         
         local function ToggleMenu()
             local state = not WindowFunctions:GetState()
@@ -5959,7 +5958,7 @@ if UseUi then
             DragStyle = 1,
             DisabledWindowControls = {},
             ShowUserInfo = true,
-            Keybind = Enum.KeyCode[HideButton] or Enum.KeyCode.RightControl,
+            Keybind = Enum.KeyCode.RightControl,
             AcrylicBlur = true,
         })
 
