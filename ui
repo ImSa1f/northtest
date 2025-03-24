@@ -1,3 +1,4 @@
+print('yo')
 
 if UseUi then
 
@@ -5054,14 +5055,6 @@ if UseUi then
                         Name = "Hide Keybind",
                         Callback = function(binded)
                             KeybindBruh = binded
-                        end,
-                        onBinded = function(bind)
-                            Window:Notify({
-                                Title = "North Hub",
-                                Description = "Rebinded Hide UI to "..tostring(bind.Name),
-                                Lifetime = 3,
-                                Scale = 1.5
-                            })
                         end,
                     }, "HideUi")
 
